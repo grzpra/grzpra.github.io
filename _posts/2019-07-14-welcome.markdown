@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Welcome!"
+date:   2019-07-14 19:00:00 +0200
+categories: general 
+---
+Welcome, thanks for checking this page, although I am not sure what do you expect to find here :-).
+
+<!--more-->
+
+This page was created because of 2 reasons:
+* I sometimes need a space where I can easily share stuff;
+* I wanted to check out how GitHub works with Jekyll;
+
+Hopefully I will manage to put something else than this post here.
