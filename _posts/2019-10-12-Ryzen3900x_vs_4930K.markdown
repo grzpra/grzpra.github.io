@@ -1,0 +1,111 @@
+---
+layout: post
+title:  "Ryzen 9 3900X vs Core i7-4930K"
+date:   2019-10-12 10:00:00 +0200
+categories: overclocking 4930K 3900X CPU
+---
+Recently I upgraded CPU, MOBO and RAM in my rig. I figured out it might be a good idea to compare upgraded system to old config. Especially, because I did not yet see a Ryzen 3000 review which directly compares new Ryzen CPUs to X79 antiques.
+
+<!--more-->
+
+## Test Setup
+
+_**Disclaimer:** Please keep in mind that I am not a professional reviewer nor I aspire to be one. Those are just the the tests I run for my own curiosity. Testing methodology is most likely flawed, especially when it comes to gaming benchmarks. I do not have enough experience to chose appropriate graphics settings._
+
+AMD system:
+* Ryzen 9 3900X
+* ASRock X570 Taichi (BIOS 1.80 AGESA 1.0.0.3 ABB)
+* GSkill F4-3200C14D-32GTZKW (2x16GB @ 3733MHz 16-16-16-32 1T GDM On)
+
+Intel system:
+* Core i7-4930K
+* Asus X79-Deluxe (BIOS 4805)
+* GSkill F3-17000CL9Q-16GBZH (4x4GB @ 2133MHz 9-11-10-28 1T)
+
+Shared components:
+* Samsung EVO 850 500GB
+* Palit Gamerock Premium GTX1080
+* Noctua NH-D15S
+* Corsair AX860
+
+Used software versions:
+
+| Software | Version |
+|:--------:|:-------:|
+| Windows 10 | 1903 |
+| nVidia drivers | 431.60 |
+| AMD chipset drivers | 1.8.19.0915 |
+| Cinebench R15 | R15 (Build RC184115DEMO) |
+| Cinebench R20 | R20.060 (Build RBBENCHMARK281795) |
+| CPU-Z | 1.89.1.x64 |
+| CPU-Z Benchmark | 17.01.64 |
+| SuperPi | mod1.5 XS |
+| 3D Mark | Time Spy v1.1 |
+| Shadow of the Tomb Raider | v1.0 build 294.0_64 |
+| Metro Last Light Redux | Redux Benchmark v3.00 x64 |
+
+For both systems Windows 10 1903 was used, however there was probably like a month between running tests on Intel platform and AMD platform, therefore Windows had more patches applied when AMD test was run. For AMD system "Ryzen high performance" power plan was used (the one which comes from AMD chipset drivers) and for Intel the default Windows one was picked.
+
+4930K was tested at default clocks (3.9 GHz) as well as overclocked to 4.4 GHz. 4.4 GHz seems to be average OC, which most of 4930K can reach. 3900X was not overclocked at all. PBO was set to Auto during the runs, I don’t really see a point in overclocking Ryzen 3000 series CPUs due to the fact how well XFR2 works.
+
+## Tests Results
+
+![Cinebench R15](/assets/Ryzen3900x_vs_4930K/cinebench-r15.png)
+{: style="text-align:center"}
+
+![Cinebench R20](/assets/Ryzen3900x_vs_4930K/cinebench-r20.png)
+{: style="text-align:center"}
+
+As expected 3900X slaughters 4930K in multi core runs, after all it has twice the amount of cores. It also beats the 4930K in single core performance in this bench, which again is not a suprise if you think about it. IPC of the CPUs increased quite a bit since X79 was released and 3900X actually runs around 4.5 GHz when only single core is loaded.
+
+![CPU-Z](/assets/Ryzen3900x_vs_4930K/cpu-z-bench.png)
+{: style="text-align:center"}
+
+CPU-Z benchmark shows the same story as Cinebench R15 and R20. Ryzen 9 3900X is the clear winner.
+
+![SuperPi 32M](/assets/Ryzen3900x_vs_4930K/superpi-32m.png)
+{: style="text-align:center"}
+
+SuperPi was always Intel domain, but 3900X manages to beat 4930K at default clocks, when OCed to 4.4 GHz Intel CPU is still faster.
+
+![Time Spy](/assets/Ryzen3900x_vs_4930K/time-spy.png)
+{: style="text-align:center"}
+
+Time Spy is another win for AMD. I did not expect such big differences in overall score between different CPUs to be honest.
+
+![Shadow of the Tomb Raider](/assets/Ryzen3900x_vs_4930K/sotr.png)
+{: style="text-align:center"}
+
+Settings used for Shadow of the Tomb Raider (integrated benchmark):
+
+| Resolution | 1920x1080 |
+| API | DirectX 12 |
+| Vsync | Off |
+| Anti-Aliasing | TAA |
+| Preset | High |
+
+![Metro Last Light](/assets/Ryzen3900x_vs_4930K/metro-last-light.png)
+{: style="text-align:center"}
+
+Settings used for Metro Last Light Redux:
+
+| Resolution | 1920x1080 |
+| Quality | High |
+| SSAA | Off |
+| Texture filtering | AF 4X |
+| Motion blur | Off |
+| Tesselation | Off |
+| Vsync | Off |
+| Advanced PhysX | Off |
+
+## Conclusion
+
+Some comparison charts:
+
+![3900X vs 4930K @ 3.9 GHz](/assets/Ryzen3900x_vs_4930K/overview-3900-4930-def.png)
+{: style="text-align:center"}
+
+![3900X vs 4930K @ 4.4 GHz](/assets/Ryzen3900x_vs_4930K/overview-3900-4930-oc.png)
+{: style="text-align:center"}
+
+Looking at those we can see that 3900X is a huge improvement for every application which can use multiple cores (hardly a surprise :-)). Single core performance is also higher on 3900X, even when compared to overclocked 4930K. Gaming wise the performance gain is around 10% although only in 1080p. With higher resolutions performance boost will definitely not be that big (if any). Generally speaking I am quite happy with the upgrade.
