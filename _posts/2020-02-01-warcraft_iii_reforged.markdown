@@ -66,6 +66,9 @@ huge price reduction.
 
 In its current form, this game is not worth the asking price in my opinion.
 
+**[11.02.2020] Update:** game seems to run better with "Reduce Mouse Lag" option
+unchecked. I am getting over 140 FPS now, however it still can dip below 100.
+
 *Warcraft III: Reforged and Warcraft are trademarks or registered trademarks
 of Blizzard Entertainment, Inc., in the U.S. and/or other countries.
 Warcraft III: Reforged logo is copyrighted by Blizzard Entertainment, Inc.*
