@@ -6,22 +6,23 @@ categories: 3900X CPU
 ---
 Few days ago I found out that my 24/7 system with Ryzen 9 3900X fails prime95
 torture test when calculating FFTs with a length of 16K or 20K with AVX2
-enabled.
+enabled at stock settings.
 
 <!--more-->
 
 This seemed a bit strange to me, because I actually never overclocked this
-CPU and the problem occurs both on total BIOS defaults as well as when infinity
-fabric clock and memory clock are set to 1866/3733. Other than this very
-specific case, system seems to be 100% stable. It passes OCCT Small data set
-AVX2 test for over 9 hours, it passes prime95 AVX2 with all other FFT lengths
-in the 1-64K range for hours, but 16K and 20K fails within few minutes. The
-fails only occur on worker threads 17,18,21 and 22, as far as I know prime95
-always assigns same workers to same CPUs, which would suggest that only 2 out
-of 12 cores are failing. I run prime95 with SUM(INPUTS) error and Rounding
-checking enabled. I read about other people having similar problems
-with their Ryzen 3000 series CPUs[^1], but those reports were mostly about
-3950X.
+CPU, so the degradation can't really be a problem here. Said tests fail on
+BIOS defaults (just after clearing CMOS) as well as with my 24/7 profile with
+infinity fabric clock and memory clock set to 1866/3733, but the CPU is fully
+stock (no PBO, no voltage offset). Other than this very specific case, system
+seems to be 100% stable. It passes OCCT Small data set AVX2 test for over
+9 hours, it passes prime95 AVX2 with all other FFT lengths in the 1-64K range
+for hours, but 16K and 20K fails within few minutes. The fails only occur on
+worker threads 17,18,21 and 22, as far as I know prime95 always assigns same
+workers to same CPUs, which would suggest that only 2 out of 12 cores are
+failing. I run prime95 with SUM(INPUTS) error and Rounding checking enabled.
+I read about other people having similar problems with their Ryzen 3000 series
+CPUs[^1], but those reports were mostly about 3950X.
 
 I am not sure if this issue actually occurred with my CPU from the first day or
 is it something which started only recently. As mentioned before I only
