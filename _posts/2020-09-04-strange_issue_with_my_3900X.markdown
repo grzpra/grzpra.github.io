@@ -78,5 +78,22 @@ some solution.
 [![prime95 16k fail screenshot](/assets/Ryzen3900x_prime95_issue/ryzen3900x_prime95_16_def_fail_thumb.jpg)](/assets/Ryzen3900x_prime95_issue/ryzen3900x_prime95_16_def_fail.png)
 {: style="text-align:center"}
 
+**[11.10.2020] Update:** Since writing original post I still did not figure out
+why my 3900X is failing 16k and 20k tests with AVX2 enabled in prime95. I tried
+RMAing CPU at the retailer, but apparently it was working fine in their tests
+(keep in mind they used most likely different motherboard). I also tested CPU
+with Linux Version of prime95 on Ubuntu 20.04 and tried fresh Windows install,
+but problem occurs on every system. In the meantime new version of prime95 was
+released (30.3b6), but that one still fails for me as well.
+
+For now I gave up and bumped LLC to 1 (on ASRock BIOS it is the setting meaning
+lowest Vdroop) and my system can finally run 16k FFTs without a failure.
+
+For me the problem seems to be caused by both motherboard not supplying voltage
+stable enough for the CPU to run correctly (this would require a bit of
+measurements to confirm)and aggressive binning from AMD side, not allowing for
+any margin of error for the stability of VCore. Maybe I will just switch to
+Zen3 once it is released and forget about my 3900X....
+
 [^1]: [Stock 3950x crashes with prime95 small FFTs@overclock.net](https://www.overclock.net/forum/10-amd-cpus/1744592-stock-3950x-crashes-prime95-small-ffts.html)
 
