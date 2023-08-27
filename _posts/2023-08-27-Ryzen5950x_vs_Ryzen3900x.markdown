@@ -1,0 +1,119 @@
+---
+layout: post
+title:  "Ryzen 9 5950X vs Ryzen 9 3900X"
+date:   2023-08-27 21:00:00 +0200
+categories: 3900X 5950X CPU
+---
+I managed to grab 5950X for a decent price, so I decided to upgrade my CPU.
+Comparison between my old and new CPU can be found here.
+
+<!--more-->
+
+## Test Setup
+
+_**Disclaimer:** Please keep in mind that I am not a professional reviewer nor
+I aspire to be one. Those are just the the tests I run for my own curiosity.
+Testing methodology is most likely flawed, especially when it comes to gaming
+benchmarks. I do not have enough experience to chose appropriate graphics settings._
+
+Hardware configuration:
+* ASRock X570 Taichi (BIOS 5.00 AGESA 1.2.0.7)
+* GSkill F4-3200C14D-32GTZKW (2x16GB @ 3733MHz 16-16-16-32 1T GDM On)
+* PowerColor 7900XTX Red Devil
+* Plextor M5 Pro 256GB
+* Noctua NH-D15S
+* Seasonic Vertex GX-1000 1000W Gold
+
+Used software versions:
+
+| Software | Version |
+|:--------:|:-------:|
+| Windows 10 | 22H2 |
+| AMD GPU drivers | 23.7.2 |
+| AMD chipset drivers | 5.05.16.529 |
+| Cinebench R15 | R15 (Build RC184115DEMO) |
+| Cinebench R20 | R20.060 (Build RBBENCHMARK281795) |
+| CPU-Z | 2.06.1.x64 |
+| CPU-Z Benchmark | 17.01.64 |
+| 3D Mark Time Spy | v1.2 |
+| 3D Mark CPU Profile | v1.1 |
+| Shadow of the Tomb Raider | v1.0 build 492.0_64 |
+| Metro Exodus Enhanced | Benchmark v1.0.0.9 x64 |
+
+## Tests Results
+
+The most important part of this post!
+
+![Cinebench R15](/assets/Ryzen5950x_vs_Ryzen3900x/cinebench-r15.png)
+{: style="text-align:center"}
+
+![Cinebench R20](/assets/Ryzen5950x_vs_Ryzen3900x/cinebench-r20.png)
+{: style="text-align:center"}
+
+![cpu-z](/assets/ryzen5950x_vs_ryzen3900x/cpu-z-bench.png)
+{: style="text-align:center"}
+
+![3DMark CPU Profile](/assets/ryzen5950x_vs_ryzen3900x/cpu-profile.png)
+{: style="text-align:center"}
+
+We can see a solid bump in performance, in both single and multi-threaded benchmarks.
+Gains in range of 20% to 40% are nothing to sneeze at.
+
+![Time Spy](/assets/Ryzen5950x_vs_Ryzen3900x/time-spy.png)
+{: style="text-align:center"}
+
+Time Spy shows smaller gains than previous benchmarks, but this is graphics benchmark
+after all. Still 15% gain in CPU score is worth noting.
+
+![Shadow of the Tomb Raider](/assets/Ryzen5950x_vs_Ryzen3900x/sotr-1440p.png)
+{: style="text-align:center"}
+
+Settings used for Shadow of the Tomb Raider (integrated benchmark):
+
+| Resolution | 2560x1440 |
+| API | DirectX 12 |
+| Vsync | Off |
+| Anti-Aliasing | TAA |
+| Preset | High |
+
+![Metro Last Light](/assets/Ryzen5950x_vs_Ryzen3900x/metro-exodus-1440p.png)
+{: style="text-align:center"}
+
+Settings used for Metro Exodus Enhanced (integrated benchmark):
+
+| Resolution | 2560x1440 |
+| Preset | High |
+| Shading Quality | High |
+| Ray Tracing | Normal |
+| NVIDIA DLSS | Off |
+| Reflections | Hybrid |
+| Variable Rate Shading | 4x |
+| Hairworks | Off |
+| Advanced PhysX | Off |
+| Tesselation | Full |
+
+For gaming benchmarks I chose settings where system was limited by CPU mostly.
+1440p and high settings in selected games is really nothing for 7900 XTX.
+In normal scenario every sane user will max graphics settings at 1440p with such
+GPU, differences between CPUs will be then smaller for sure.
+
+## Conclusion
+
+![5950X vs 3900X](/assets/Ryzen5950X_vs_Ryzen3900X/overview.png)
+{: style="text-align:center"}
+
+One thing to note is that the results for 3900X are slightly lower than results
+presented in my previous test:
+[Ryzen 9 3900X vs Core i7-4930K]({% post_url 2019-10-12-Ryzen3900x_vs_4930K %}).
+I would attribute it to the fact that early Taichi X570 BIOSes had broken
+power usage readout, which resulted in CPU boosting bit higher than expected.
+This is not a big deal as the differences are really marginal.
+
+Obvious conclusion is that 5950X is faster than 3900X. No surprises here, 4 more
+cores + newer arch do the job. Was it worth upgrading? Well, it is hard to say.
+I mainly jumped the 5950X ship, because I was able to get it cheaply plus I was
+kinda fed up with my CPU running 24/7 with LLC set to 1 (see:
+[Strange issue with my 3900X]({% post_url 2020-09-04-strange_issue_with_my_3900X %})).
+
+Off to tweak memory on new CPU, so far, I only tried same RAM/Bus clocks as on my
+3900X (although those worked without any issue)!
