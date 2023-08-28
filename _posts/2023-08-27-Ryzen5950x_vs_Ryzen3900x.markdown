@@ -99,7 +99,7 @@ GPU, differences between CPUs will be then smaller for sure.
 
 ## Conclusion
 
-![5950X vs 3900X](/assets/Ryzen5950X_vs_Ryzen3900X/overview.png)
+![5950X vs 3900X](/assets/Ryzen5950x_vs_Ryzen3900x/overview.png)
 {: style="text-align:center"}
 
 One thing to note is that the results for 3900X are slightly lower than results
