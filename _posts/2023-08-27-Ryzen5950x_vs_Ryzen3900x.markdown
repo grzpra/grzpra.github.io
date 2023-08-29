@@ -50,10 +50,10 @@ The most important part of this post!
 ![Cinebench R20](/assets/Ryzen5950x_vs_Ryzen3900x/cinebench-r20.png)
 {: style="text-align:center"}
 
-![cpu-z](/assets/ryzen5950x_vs_ryzen3900x/cpu-z-bench.png)
+![cpu-z](/assets/Ryzen5950x_vs_Ryzen3900x/cpu-z-bench.png)
 {: style="text-align:center"}
 
-![3DMark CPU Profile](/assets/ryzen5950x_vs_ryzen3900x/cpu-profile.png)
+![3DMark CPU Profile](/assets/Ryzen5950x_vs_Ryzen3900x/cpu-profile.png)
 {: style="text-align:center"}
 
 We can see a solid bump in performance, in both single and multi-threaded benchmarks.
